@@ -29,6 +29,7 @@ window.displayNewProjectForm = function() {
 
 //FUNCTION - HIDING THE NEW PROJ FORM
 // hides the form back to display none
+
 window.hideNewProjectForm = function() {
     let theForm = $('.project-form-container');
     theForm.css({
