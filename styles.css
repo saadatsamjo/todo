@@ -1,0 +1,190 @@
+/*  */
+body{
+    background-color: rgb(52, 64, 70);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* font-family: inter; */
+}
+
+
+/* HEADER */
+.header{
+    background-color: aliceblue;
+    flex: 1;
+}
+
+
+/* MAIN CONTAINER, CONTAINS THE SUBMENU AND THE TODOS AREA */
+.main-container{
+    display: flex;
+    flex: 12;
+}
+
+.empty-projects-text{
+    color: white;
+    text-align: center;
+    padding:10%;
+}
+
+
+
+/* SIDE NAV */
+.side-nav{
+    background-color: #39486f;
+    padding-left: 20PX;
+    font-family: inter;
+    flex: 1;
+}
+
+
+/* THE OPTIOS LIKE Today, This week, Project name */
+.sub-menu-option{
+    margin-left: 20px;
+}
+
+/* se all projects */
+.see-all-button{
+    display: none;
+    color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+/* THE TO DOS AREA */
+.main-projects-area-container{
+    background-color:#91a7de;
+    margin: 0 auto;
+    flex: 4;
+    position: relative;
+    
+}
+
+
+
+
+
+
+
+
+
+/* THE CONTAINER OF THE TABLE OF PROJECTS */
+.the-projects{
+    /* useless line below, cause its handled in dom.js showProjects() */
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* NEW PROJECT FORM */
+.project-form-container, .task-form-container{
+    display: none;
+}
+
+.new-project-form, .new-task-form{
+    display: flex;
+    background-color:#91a7de;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+
+.label{
+    margin-left: 165px;
+    margin-top: 100px;
+}
+
+
+.text-input{
+    width: 800px;
+    margin: 0 auto;
+    height: 40px;
+}
+
+.time-options{
+    display: flex;
+    margin: 1px auto;
+}
+
+.save-project-button{
+    height: 30px;
+    border: #39486f;
+    background-color: white;
+    width: 130px;
+    margin: 0 auto;
+    border-radius: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* A TABLE FOR THE PROJECTS */
+table{
+    width: 100%;
+    margin-top: 20px;
+}
+
+th{
+    padding-right: 10vh;
+}
+
+
+td{
+    background-color: #6581c7;
+    color: white;
+    padding: 0.5vh 4vh;
+}
+
+
+
+/* temporary */
+.new-task-form{
+    padding: 10% 10% 10% 20%;
+}
+
+
+
+
+
+
+
+
+
+/* THE FOOTER */
+.footer{
+    background-color: #6581c7;
+    flex: 2;
+}
+
+
+
+

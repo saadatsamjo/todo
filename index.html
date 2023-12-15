@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to do</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuid.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h4>2do</h4>
+    </div>
+
+    <!-- MAIN CONTAINER FOR SUBMENU AND THE TO DOS AREA STARTS HERE -->
+    <div class="main-container">
+        <div class="side-nav">
+
+            <!-- THE SUBMENU INSIDE NAVBAR: TASK TIMING -->
+            <div class="side-menu-sub">
+                <h4>Task Timing</h4>
+                <div class="task-times-dropdown">
+                    <p class="sub-menu-option">Today</p>
+                    <p class="sub-menu-option">This week</p>
+                    <p class="sub-menu-option">This month</p>
+                </div>
+            </div>
+
+            <!-- THE SUBMENU INSIDE NAVBAR: PROJECTS -->
+            <div class="side-menu-sub">
+                <h4>Projects</h4>
+                <div class="projects-dropdown">
+                    <!-- <p class="sub-menu-option project-selector-in-side-menu">One huge project</p> -->
+                    <!-- <p class="sub-menu-option project-selector-in-side-menu">Another one</p> -->
+                    <!-- <p class="sub-menu-option project-selector-in-side-menu">Stuff stuff proj</p> -->
+                </div>
+                <p class="see-all-button">See all</p>
+            </div>
+            <button  id="new-project-button"  type="button" onclick="displayNewProjectForm()">New Project</button>
+        </div>
+        <!-- MAIN CONTAINER FOR SUBMENU AND THE TO DOS AREA STARTS HERE -->
+
+
+        <!-- THE TO DOS AREA  -->
+        <div class="main-projects-area-container">
+
+            <div class="the-projects">
+            </div>
+
+            
+    
+            <!-- new project form -->
+            <div class="project-form-container">
+                <form action="" id="new-project" class="new-project-form" onsubmit="return false">
+                    <label class="label" for="project-name">Project Name</label>
+                    <input class="text-input" type="text" id="project-name">
+    
+                    <label class="label" for="project-notes">Project notes</label>
+                    <input class="text-input" type="text" name="project-notes" id="project-notes">
+    
+                    <div class="time-options">
+                        <label for="week">
+                            <input class="time-input" type="radio" id="week" name="period" value="week">
+                            Week
+                        </label>
+    
+                        <label for="month">
+                            <input class="time-input" type="radio" id="month" name="period" value="month">
+                            Month
+                        </label>
+    
+                        <label for="three-months">
+                            <input class="time-input" type="radio" id="three-months" name="period" value="3months">
+                            3 Months
+                        </label>
+                    </div>
+                    <button id="save-project-button" class="save-project-button" type="submit" onclick="handleNewProjectSubmission(event)">Save New Project</button>
+                </form>
+            </div>
+
+
+            <!-- new task form -->
+                <div class="task-form-container">
+                    <form action="" id="new-task" class="new-task-form" onsubmit="return false">
+                        <label class="label" for="task-name">Task Name</label>
+                        <input class="text-input" type="text" id="task-name">
+                        
+                        <label for="due-date">Due Date</label>
+                        <input id="due-date" type="number">
+                        <div class="submit-task-button"><button id="save-task-button" class="save-task-button" type="submit" onclick="handleNewTaskSubmission(event, this.id)">Save New Task</button></div>
+                    </form>
+                </div>
+        
+
+        </div>
+    </div>
+
+    <!-- THE FOOTER -->
+    <div class="footer">
+        footer
+    </div>
+
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="module" src="src/index.js"></script>
+</body>
+</html>
